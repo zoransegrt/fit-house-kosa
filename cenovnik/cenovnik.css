@@ -1,0 +1,445 @@
+/* Osnovno */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-blue: #1da1f2;
+  --dark-bg: #0b0f1a;
+
+  --header-height: 296px;
+
+  /* Animacije */
+  --reveal-ease: cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    "Noto Sans", "Helvetica Neue", sans-serif;
+
+  background: var(--dark-bg);
+  color: #ffffff;
+
+  scrollbar-gutter: stable;
+}
+
+/* Layout helper */
+.container {
+  width: min(1220px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* Header fade-in na load */
+.page-fade {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 600ms var(--reveal-ease), transform 600ms var(--reveal-ease);
+  will-change: opacity, transform;
+}
+
+.page-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  height: var(--header-height);
+
+  background: transparent;
+  border-bottom: 0;
+
+  pointer-events: auto;
+
+  transition: opacity 180ms ease, transform 180ms ease;
+  will-change: opacity, transform;
+}
+
+.site-header.is-hidden {
+  opacity: 0;
+  transform: translateY(-14px);
+  pointer-events: none;
+}
+
+.site-header .container {
+  width: min(1500px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.header-inner {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* LEVO: logo */
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo-wrap {
+  height: 220px;
+  width: 220px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 2px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.brand-logo {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* SREDINA */
+.header-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.header-center > * {
+  pointer-events: auto;
+}
+
+.header-right {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Dropdown wrapper */
+.menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* NAV dugme */
+.menu-btn {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  padding: 22px 22px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  display: inline-block;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.menu-btn-line {
+  display: block;
+  width: 44px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 10px 0;
+  border-radius: 999px;
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1),
+    opacity 0.2s ease;
+}
+
+.menu[data-dropdown="nav"].is-open .menu-btn-line:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
+}
+.menu[data-dropdown="nav"].is-open .menu-btn-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.6);
+}
+.menu[data-dropdown="nav"].is-open .menu-btn-line:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
+}
+
+/* JEZIK dugme */
+.lang-btn {
+  width: 86px;
+  height: 86px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.lang-flag {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Dropdown panel */
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 14px);
+  width: 360px;
+  padding: 18px;
+
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+
+  transform-origin: top left;
+  transform: translateY(-10px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(6px);
+  transition: opacity 0.22s ease, transform 0.22s ease, filter 0.22s ease;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.menu.is-open .dropdown {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  filter: blur(0);
+}
+
+.menu[data-dropdown="nav"] .dropdown {
+  left: 50%;
+  right: auto;
+  transform-origin: top center;
+  transform: translateX(-50%) translateY(-10px) scale(0.98);
+}
+
+.menu[data-dropdown="nav"].is-open .dropdown {
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* Jezik dropdown uži */
+.dropdown--lang {
+  width: 140px;
+  padding: 14px;
+}
+
+.menu[data-dropdown="lang"] .dropdown {
+  left: 50%;
+  right: auto;
+  transform-origin: top center;
+  transform: translateX(-50%) translateY(-10px) scale(0.98);
+}
+
+.menu[data-dropdown="lang"].is-open .dropdown {
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* Linkovi */
+.dropdown-link {
+  display: block;
+  padding: 16px 14px;
+  border-radius: 14px;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.dropdown-link:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Aktivni link u dropdown meniju */
+.dropdown-link.is-active {
+  border: 2px solid rgba(29, 161, 242, 0.95);
+  background: rgba(29, 161, 242, 0.14);
+  color: rgba(255, 255, 255, 1);
+}
+
+.dropdown-cta {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: #0b1220;
+
+  padding: 18px 16px;
+  border-radius: 14px;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.dropdown-cta:hover {
+  opacity: 0.92;
+}
+
+.lang-option {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease;
+}
+
+.lang-option:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* =========================
+   Page hero (naslov strane)
+   ========================= */
+
+.page-hero {
+  padding-top: 52px;
+  padding-bottom: 56px;
+}
+
+.page-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  font-size: clamp(34px, 4.2vw, 64px);
+  color: var(--brand-blue);
+}
+
+.page-subtitle {
+  margin: 12px 0 0;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* =========================
+   Responsive (postojeći)
+   ========================= */
+@media (max-width: 820px) {
+  .site-header .container {
+    width: calc(100% - 32px);
+  }
+
+  .brand-logo-wrap {
+    height: 170px;
+    width: 170px;
+  }
+
+  .dropdown {
+    width: min(92vw, 360px);
+  }
+}
+
+/* =========================
+   Laptop responsive (NOVO)
+   Samo laptop; desktop NE DIRAMO
+   ========================= */
+@media (max-height: 900px) and (min-width: 900px) {
+  :root {
+    --header-height: 170px;
+  }
+
+  .site-header .container {
+    width: min(1400px, calc(100% - 40px));
+  }
+
+  .brand-logo-wrap {
+    width: 130px;
+    height: 130px;
+  }
+
+  .menu-btn {
+    padding: 14px 14px;
+    border-radius: 16px;
+  }
+
+  .menu-btn-line {
+    width: 30px;
+    height: 3px;
+    margin: 7px 0;
+  }
+
+  .menu[data-dropdown="nav"].is-open .menu-btn-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .menu[data-dropdown="nav"].is-open .menu-btn-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .lang-btn {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+  }
+
+  .lang-flag {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dropdown {
+    width: 300px;
+    padding: 12px;
+    top: calc(100% + 10px);
+
+    max-height: none;
+    overflow: visible;
+  }
+
+  .dropdown-link {
+    padding: 12px 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .dropdown-cta {
+    padding: 14px 12px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+}
