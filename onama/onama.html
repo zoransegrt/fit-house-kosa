@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O nama | Fit Kosa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="onama.css" />
+  </head>
+
+  <body class="page-fade">
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="Fit Kosa - početna">
+          <span class="brand-logo-wrap" aria-hidden="true">
+            <img class="brand-logo" src="/img/logo.png" alt="Fit Kosa logo" />
+          </span>
+        </a>
+
+        <div class="header-right">
+          <div class="menu header-nav" data-dropdown="nav">
+            <button
+              class="menu-btn"
+              type="button"
+              data-dropdown-trigger="nav"
+              aria-label="Otvori navigaciju"
+              aria-expanded="false"
+            >
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+            </button>
+
+            <nav
+              class="dropdown"
+              data-dropdown-panel="nav"
+              aria-label="Sekcije sajta"
+            >
+              <a class="dropdown-link" href="/index.html">Početna</a>
+              <a class="dropdown-link" href="/treneri/treneri.html">Treneri</a>
+              <a
+                class="dropdown-link is-active"
+                href="/onama/onama.html"
+                aria-current="page"
+              >
+                O&nbsp;nama
+              </a>
+              <a class="dropdown-link" href="/cenovnik/cenovnik.html"
+                >Cenovnik</a
+              >
+              <a class="dropdown-link" href="/kontakt/kontakt.html">Kontakt</a>
+              <a class="dropdown-cta" href="/clan/clan.html">Postani član</a>
+            </nav>
+          </div>
+
+          <!-- ✅ uklonjeno: promena jezika -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO / naslov -->
+      <section class="page-hero reveal" aria-label="O nama - naslov">
+        <div class="container">
+          <h1 class="page-title">O NAMA</h1>
+          <p class="page-subtitle">Fit House Kosa — Bežanijska kosa</p>
+        </div>
+      </section>
+
+      <!-- 3 sekcije: L/R, R/L, L/R -->
+      <section class="about-page" aria-label="O nama - sadržaj">
+        <div class="container about-stack">
+          <!-- 1) slika levo, tekst desno -->
+          <article class="about-row reveal" aria-label="Ko smo mi">
+            <div class="about-media">
+              <img
+                class="about-img"
+                src="/img/enterijer.png"
+                alt="Fit House Kosa - enterijer teretane"
+                loading="lazy"
+              />
+              <div class="about-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="about-textbox">
+              <h2 class="about-title">Moderna teretana na Bežanijskoj kosi</h2>
+              <p class="about-text">
+                Fit House Kosa je moderna teretana koja se nalazi na adresi
+                <strong>Partizanske avijacije 4</strong>, na Bežanijskoj kosi.
+                Namenjena je svima koji žele da unaprede svoje zdravlje,
+                kondiciju i fizički izgled, bez obzira na nivo iskustva.
+              </p>
+            </div>
+          </article>
+
+          <!-- 2) slika desno, tekst levo -->
+          <article
+            class="about-row about-row--reverse reveal"
+            aria-label="Prostor i oprema"
+          >
+            <div class="about-media">
+              <img
+                class="about-img"
+                src="/img/oprema.png"
+                alt="Fit House Kosa - oprema i sprave"
+                loading="lazy"
+              />
+              <div class="about-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="about-textbox">
+              <h2 class="about-title">Oprema i organizacija prostora</h2>
+              <p class="about-text">
+                Prostor je pažljivo organizovan i opremljen kvalitetnim spravama
+                za trening snage, kardio i funkcionalne treninge, što omogućava
+                efikasan i raznovrstan rad na celokupnom telu.
+              </p>
+              <p class="about-text">
+                Bilo da ste početnik ili iskusan vežbač, ovde možete pronaći
+                uslove za ostvarenje svojih ciljeva — od mršavljenja i
+                oblikovanja tela do povećanja snage i izdržljivosti.
+              </p>
+            </div>
+          </article>
+
+          <!-- 3) slika levo, tekst desno -->
+          <article class="about-row reveal" aria-label="Atmosfera i zajednica">
+            <div class="about-media">
+              <img
+                class="about-img"
+                src="/img/img3.png"
+                alt="Fit House Kosa - atmosfera treninga"
+                loading="lazy"
+              />
+              <div class="about-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="about-textbox">
+              <h2 class="about-title">Atmosfera, zajednica i motivacija</h2>
+              <p class="about-text">
+                U Fit House Kosa poseban akcenat stavlja se na prijatnu
+                atmosferu i zajednicu koja motiviše. Trening nije samo obaveza,
+                već deo svakodnevnog života u kojem se razvija disciplina,
+                samopouzdanje i pozitivna energija.
+              </p>
+              <p class="about-text">
+                Ako tražite mesto gde ćete trenirati u dobrom okruženju i uz
+                kvalitetne uslove, Fit House Kosa je pravi izbor za vas.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-cta reveal" aria-label="Poziv na akciju">
+        <div class="container cta-box">
+          <div class="cta-text">
+            <h2 class="cta-title">Želiš da kreneš već danas?</h2>
+            <p class="cta-subtitle">
+              Piši nam ili svrati — rado ćemo pomoći oko plana i termina.
+            </p>
+          </div>
+          <a class="cta-btn" href="/index.html#kontakt">Kontakt</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="onama.js"></script>
+  </body>
+</html>

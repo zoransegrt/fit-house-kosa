@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cenovnik | Fit Kosa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="cenovnik.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="Fit Kosa - početna">
+          <span class="brand-logo-wrap" aria-hidden="true">
+            <img class="brand-logo" src="/img/logo.png" alt="Fit Kosa logo" />
+          </span>
+        </a>
+
+        <div class="header-right">
+          <div class="menu header-nav" data-dropdown="nav">
+            <button
+              class="menu-btn"
+              type="button"
+              data-dropdown-trigger="nav"
+              aria-label="Otvori navigaciju"
+              aria-expanded="false"
+              aria-controls="navDropdown"
+            >
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+            </button>
+
+            <nav
+              class="dropdown"
+              data-dropdown-panel="nav"
+              aria-label="Sekcije sajta"
+            >
+              <a class="dropdown-link" href="/index.html">Početna</a>
+              <a class="dropdown-link" href="/treneri/treneri.html">Treneri</a>
+              <a class="dropdown-link" href="/onama/onama.html">O&nbsp;nama</a>
+              <a
+                class="dropdown-link is-active"
+                href="/cenovnik/cenovnik.html"
+                aria-current="page"
+              >
+                Cenovnik
+              </a>
+              <a class="dropdown-link" href="/kontakt/kontakt.html">Kontakt</a>
+              <a class="dropdown-cta" href="/clan/clan.html">Postani član</a>
+            </nav>
+          </div>
+
+          <!-- ✅ uklonjeno: promena jezika -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="page-hero" aria-label="Cenovnik - naslov">
+        <div class="container">
+          <h1 class="page-title">CENOVNIK</h1>
+          <p class="page-subtitle">Sve usluge na jednom mestu</p>
+
+          <div class="page-chips" aria-label="Brza navigacija">
+            <a class="chip" href="#treninzi">Treninzi</a>
+            <a class="chip" href="#inbody">InBody 770</a>
+            <a class="chip" href="#nutrition">Nutrition</a>
+            <a class="chip" href="#masaza">Masaža</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="pricing" aria-label="Cenovnik - sadržaj">
+        <div class="container">
+          <!-- TRENINZI -->
+          <section class="pricing-section" id="treninzi" aria-label="Treninzi">
+            <header class="section-head">
+              <h2 class="section-title">Treninzi</h2>
+              <p class="section-subtitle">Cene treninga i članarina</p>
+            </header>
+
+            <div class="price-card">
+              <div
+                class="price-table"
+                role="table"
+                aria-label="Treninzi - cenovnik"
+              >
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Slobodno vežbanje 1 termin
+                  </div>
+                  <div class="cell price" role="cell">800</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Slobodno vežbanje 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">4.500</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Slobodno vežbanje 3 meseca
+                  </div>
+                  <div class="cell price" role="cell">12.800</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Slobodno vežbanje 6 meseci
+                  </div>
+                  <div class="cell price" role="cell">25.600</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Slobodno vežbanje uz personalni 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">3.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Slobodno vežbanje do 15h 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">4.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Vođeni trening 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">6.600</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Vođeni trening 3 meseca
+                  </div>
+                  <div class="cell price" role="cell">18.800</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Vođeni trening 6 meseci
+                  </div>
+                  <div class="cell price" role="cell">37.600</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Vođeni trening do 15h 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">6.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Personalni trening 8 termina 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">12.800</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Personalni trening 12 termina 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">18.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Personalni trening 16 termina 1 mesec
+                  </div>
+                  <div class="cell price" role="cell">22.400</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Split personalni 8 termina 1 mesec / po osobi
+                  </div>
+                  <div class="cell price" role="cell">9.600</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Split personalni 12 termina 1 mesec / po osobi
+                  </div>
+                  <div class="cell price" role="cell">13.200</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Split personalni 16 termina 1 mesec / po osobi
+                  </div>
+                  <div class="cell price" role="cell">16.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">Dnevni najam peškira</div>
+                  <div class="cell price" role="cell">100</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Izrada i zamena članske kartice
+                  </div>
+                  <div class="cell price" role="cell">500</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">Full fit 8</div>
+                  <div class="cell price" role="cell">31.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">Full fit 12</div>
+                  <div class="cell price" role="cell">35.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">Full fit 16</div>
+                  <div class="cell price" role="cell">39.000</div>
+                </div>
+              </div>
+
+              <div class="price-note">
+                <span class="note-dot" aria-hidden="true"></span>
+                <p class="note-text">
+                  Sve cene su izražene u dinarima (RSD). Za dodatne informacije,
+                  kontaktiraj nas.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- INBODY -->
+          <section class="pricing-section" id="inbody" aria-label="InBody 770">
+            <header class="section-head">
+              <h2 class="section-title">InBody 770</h2>
+              <p class="section-subtitle">Analiza telesnog sastava</p>
+            </header>
+
+            <div class="price-card">
+              <div
+                class="price-table"
+                role="table"
+                aria-label="InBody 770 - cenovnik"
+              >
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">Za personalce</div>
+                  <div class="cell price" role="cell">1.000</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Za članove na drugim programima
+                  </div>
+                  <div class="cell price" role="cell">1.200</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">Ostali</div>
+                  <div class="cell price" role="cell">1.500</div>
+                </div>
+              </div>
+
+              <div class="price-note">
+                <span class="note-dot" aria-hidden="true"></span>
+                <p class="note-text">
+                  Za rezervacije termina i više informacija, piši nam ili pozovi
+                  (kontakt na početnoj strani).
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- NUTRITION -->
+          <section
+            class="pricing-section"
+            id="nutrition"
+            aria-label="Nutrition"
+          >
+            <header class="section-head">
+              <h2 class="section-title">Nutrition</h2>
+              <p class="section-subtitle">Planovi ishrane i konsultacije</p>
+            </header>
+
+            <div class="price-card">
+              <div
+                class="price-table"
+                role="table"
+                aria-label="Nutrition - cenovnik"
+              >
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Standardni plan ishrane (merenje telesnog sastava, pregled
+                    nutricioniste, izrada plana ishrane za mesec dana, kontrola)
+                  </div>
+                  <div class="cell price" role="cell">9.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Posebni plan ishrane (za profesionalne sportiste, veganska i
+                    vegetarijanska ishrana, povećanje telesne težine)
+                  </div>
+                  <div class="cell price" role="cell">11.000</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Konsultacije (merenje telesnog sastava, pregled
+                    nutricioniste, izrada generalnog plana ishrane)
+                  </div>
+                  <div class="cell price" role="cell">4.500</div>
+                </div>
+              </div>
+
+              <div class="price-note">
+                <span class="note-dot" aria-hidden="true"></span>
+                <p class="note-text">
+                  Sve cene su izražene u dinarima (RSD). Za dodatne informacije,
+                  kontaktiraj nas.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- MASAŽA -->
+          <section class="pricing-section" id="masaza" aria-label="Masaža">
+            <header class="section-head">
+              <h2 class="section-title">Masaža</h2>
+              <p class="section-subtitle">
+                Sportske, terapeutske i relax masaže
+              </p>
+            </header>
+
+            <div class="price-card">
+              <div
+                class="price-table"
+                role="table"
+                aria-label="Masaža - cenovnik"
+              >
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Antistres masaža 70 min.
+                  </div>
+                  <div class="cell price" role="cell">3.500</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Sportska / terapeutska masaža 45 min.
+                  </div>
+                  <div class="cell price" role="cell">2.500</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Sportska / terapeutska masaža celog tela 60 min.
+                  </div>
+                  <div class="cell price" role="cell">3.300</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Relax masaža leđa 30 min.
+                  </div>
+                  <div class="cell price" role="cell">1.800</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Relax masaža celog tela 60 min.
+                  </div>
+                  <div class="cell price" role="cell">2.900</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Relax masaža celog tela 90 min.
+                  </div>
+                  <div class="cell price" role="cell">4.100</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Refleksologija stopala 30 min.
+                  </div>
+                  <div class="cell price" role="cell">1.800</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Masaža lica, kosmatog dela glave i dekoltea 30 min.
+                  </div>
+                  <div class="cell price" role="cell">1.800</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Anticelulit masaža 45 min.
+                  </div>
+                  <div class="cell price" role="cell">1.600</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Anticelulit masaža 45 min. (paket od 10 tretmana)
+                  </div>
+                  <div class="cell price" role="cell">13.600</div>
+                </div>
+
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">
+                    Bioptron terapeutska masaža leđa (30+10 min)
+                  </div>
+                  <div class="cell price" role="cell">2.100</div>
+                </div>
+                <div class="row" role="row">
+                  <div class="cell name" role="cell">Bioptron lampa 10 min</div>
+                  <div class="cell price" role="cell">300</div>
+                </div>
+              </div>
+
+              <div class="price-note">
+                <span class="note-dot" aria-hidden="true"></span>
+                <p class="note-text">
+                  Za rezervacije termina i više informacija, piši nam ili pozovi
+                  (kontakt na početnoj strani).
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page-cta" aria-label="Poziv na akciju">
+        <div class="container cta-box">
+          <div class="cta-text">
+            <h2 class="cta-title">Spreman/na si da kreneš?</h2>
+            <p class="cta-subtitle">Učlani se i kreni da treniraš već danas.</p>
+          </div>
+          <a class="cta-btn" href="/index.html#postani-clan">Postani član</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="cenovnik.js"></script>
+  </body>
+</html>

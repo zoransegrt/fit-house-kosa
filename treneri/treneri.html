@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treneri | Fit Kosa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="treneri.css" />
+  </head>
+
+  <body class="page-fade">
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="Fit Kosa - početna">
+          <span class="brand-logo-wrap" aria-hidden="true">
+            <img class="brand-logo" src="/img/logo.png" alt="Fit Kosa logo" />
+          </span>
+        </a>
+
+        <div class="header-right">
+          <div class="menu header-nav" data-dropdown="nav">
+            <button
+              class="menu-btn"
+              type="button"
+              data-dropdown-trigger="nav"
+              aria-label="Otvori navigaciju"
+              aria-expanded="false"
+            >
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+            </button>
+
+            <nav
+              class="dropdown"
+              data-dropdown-panel="nav"
+              aria-label="Sekcije sajta"
+            >
+              <a class="dropdown-link" href="/index.html">Početna</a>
+              <a
+                class="dropdown-link is-active"
+                href="/treneri/treneri.html"
+                aria-current="page"
+              >
+                Treneri
+              </a>
+              <a class="dropdown-link" href="/onama/onama.html">O&nbsp;nama</a>
+              <a class="dropdown-link" href="/cenovnik/cenovnik.html"
+                >Cenovnik</a
+              >
+              <a class="dropdown-link" href="/kontakt/kontakt.html">Kontakt</a>
+              <a class="dropdown-cta" href="/clan/clan.html">Postani član</a>
+            </nav>
+          </div>
+
+          <!-- ✅ uklonjeno: promena jezika -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO / naslov -->
+      <section class="page-hero reveal" aria-label="Treneri - naslov">
+        <div class="container">
+          <h1 class="page-title">TRENERI</h1>
+          <p class="page-subtitle">Upoznaj naš tim — Fit Kosa</p>
+        </div>
+      </section>
+
+      <!-- BIG CARDS (sections) -->
+      <section class="trainers-page" aria-label="Treneri - profili">
+        <div class="container trainers-stack">
+          <!-- 1 -->
+          <article class="trainer-row reveal" aria-label="Bojan Magazin">
+            <div class="trainer-media">
+              <img
+                class="trainer-img"
+                src="/img/profile.png"
+                alt="Bojan Magazin"
+                loading="lazy"
+              />
+              <div class="trainer-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="trainer-box">
+              <h2 class="trainer-name">BOJAN MAGAZIN</h2>
+              <p class="trainer-role">PERSONALNI TRENER</p>
+
+              <ul class="trainer-tags" aria-label="Specijalnosti">
+                <li class="trainer-tag">SNAGA</li>
+                <li class="trainer-tag">HIPERTROFIJA</li>
+                <li class="trainer-tag">TEHNIKA</li>
+              </ul>
+
+              <p class="trainer-bio">
+                Fokus na pravilnoj tehnici i progresivnom programu. Idealno za
+                početnike i napredne.
+              </p>
+
+              <div class="trainer-actions">
+                <a class="trainer-cta" href="/index.html#kontakt"
+                  >ZAKAŽI TERMIN</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article
+            class="trainer-row trainer-row--reverse reveal"
+            aria-label="Jovana Nikolovski"
+          >
+            <div class="trainer-media">
+              <img
+                class="trainer-img"
+                src="/img/profile.png"
+                alt="Jovana Nikolovski"
+                loading="lazy"
+              />
+              <div class="trainer-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="trainer-box">
+              <h2 class="trainer-name">JOVANA NIKOLOVSKI</h2>
+              <p class="trainer-role">KONDICIONI TRENER</p>
+
+              <ul class="trainer-tags" aria-label="Specijalnosti">
+                <li class="trainer-tag">KONDICIJA</li>
+                <li class="trainer-tag">MOBILNOST</li>
+                <li class="trainer-tag">CARDIO</li>
+              </ul>
+
+              <p class="trainer-bio">
+                Treninzi koji podižu energiju, izdržljivost i mobilnost — bez
+                komplikovanja.
+              </p>
+
+              <div class="trainer-actions">
+                <a class="trainer-cta" href="/index.html#kontakt"
+                  >ZAKAŽI TERMIN</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="trainer-row reveal" aria-label="Nenad Stanisavljević">
+            <div class="trainer-media">
+              <img
+                class="trainer-img"
+                src="/img/profile.png"
+                alt="Nenad Stanisavljević"
+                loading="lazy"
+              />
+              <div class="trainer-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="trainer-box">
+              <h2 class="trainer-name">NENAD STANISAVLJEVIĆ</h2>
+              <p class="trainer-role">FUNKCIONALNI TRENING</p>
+
+              <ul class="trainer-tags" aria-label="Specijalnosti">
+                <li class="trainer-tag">FUNKCIONALNO</li>
+                <li class="trainer-tag">CORE</li>
+                <li class="trainer-tag">KOREKCIJA</li>
+              </ul>
+
+              <p class="trainer-bio">
+                Fokus na stabilnosti, snazi i pokretu bez bola. Odličan izbor za
+                povratak u formu.
+              </p>
+
+              <div class="trainer-actions">
+                <a class="trainer-cta" href="/index.html#kontakt"
+                  >ZAKAŽI TERMIN</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article
+            class="trainer-row trainer-row--reverse reveal"
+            aria-label="Nemanja Tunguz"
+          >
+            <div class="trainer-media">
+              <img
+                class="trainer-img"
+                src="/img/profile.png"
+                alt="Nemanja Tunguz"
+                loading="lazy"
+              />
+              <div class="trainer-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="trainer-box">
+              <h2 class="trainer-name">NEMANJA TUNGUZ</h2>
+              <p class="trainer-role">MRŠAVLJENJE &amp; OBLIKOVANJE</p>
+
+              <ul class="trainer-tags" aria-label="Specijalnosti">
+                <li class="trainer-tag">MRŠAVLJENJE</li>
+                <li class="trainer-tag">OBLIKOVANJE</li>
+                <li class="trainer-tag">NAVIKE</li>
+              </ul>
+
+              <p class="trainer-bio">
+                Kombinacija treninga i navika koje daju realne rezultate —
+                održivo i bez ekstremnih dijeta.
+              </p>
+
+              <div class="trainer-actions">
+                <a class="trainer-cta" href="/index.html#kontakt"
+                  >ZAKAŽI TERMIN</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-cta reveal" aria-label="Poziv na akciju">
+        <div class="container cta-box">
+          <div class="cta-text">
+            <h2 class="cta-title">Želiš plan i podršku?</h2>
+            <p class="cta-subtitle">
+              Javi nam se i predložićemo trenera po tvom cilju.
+            </p>
+          </div>
+          <a class="cta-btn" href="/index.html#kontakt">Kontakt</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="treneri.js"></script>
+  </body>
+</html>

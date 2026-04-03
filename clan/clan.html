@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postani član | Fit Kosa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="clan.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="/index.html#pocetna"
+          aria-label="Fit Kosa - početna"
+        >
+          <span class="brand-logo-wrap" aria-hidden="true">
+            <img class="brand-logo" src="/img/logo.png" alt="Fit Kosa logo" />
+          </span>
+        </a>
+
+        <div class="header-right">
+          <div class="menu header-nav" data-dropdown="nav">
+            <button
+              class="menu-btn"
+              type="button"
+              data-dropdown-trigger="nav"
+              aria-label="Otvori navigaciju"
+              aria-expanded="false"
+            >
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+            </button>
+
+            <nav
+              class="dropdown"
+              data-dropdown-panel="nav"
+              aria-label="Sekcije sajta"
+            >
+              <a class="dropdown-link" href="/index.html">Početna</a>
+              <a class="dropdown-link" href="/treneri/treneri.html">Treneri</a>
+              <a class="dropdown-link" href="/onama/onama.html">O&nbsp;nama</a>
+              <a class="dropdown-link" href="/cenovnik/cenovnik.html"
+                >Cenovnik</a
+              >
+              <a class="dropdown-link" href="/kontakt/kontakt.html">Kontakt</a>
+              <a
+                class="dropdown-cta is-active"
+                href="/clan/clan.html"
+                aria-current="page"
+              >
+                Postani član
+              </a>
+            </nav>
+          </div>
+
+          <!-- ✅ uklonjeno: promena jezika -->
+        </div>
+      </div>
+    </header>
+
+    <main class="wizard">
+      <!-- STEP 1 -->
+      <section class="step is-active" id="step1" aria-label="Unesite podatke">
+        <div class="container">
+          <div class="hero">
+            <h1 class="page-title">POSTANI ČLAN</h1>
+            <p class="page-subtitle">
+              Prvo unesite svoje podatke da bismo nastavili dalje.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="step-title">1. Vaši podaci</h2>
+
+            <form class="form" id="memberForm" novalidate>
+              <label class="field">
+                <span class="field-label">Ime i prezime</span>
+                <input
+                  class="field-input"
+                  type="text"
+                  name="fullName"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Broj telefona</span>
+                <input
+                  class="field-input"
+                  type="tel"
+                  name="phone"
+                  autocomplete="tel"
+                  required
+                />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Email</span>
+                <input
+                  class="field-input"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                />
+              </label>
+
+              <p class="error" id="step1Error" aria-live="polite"></p>
+
+              <div class="actions">
+                <button class="btn btn-blue" type="button" id="toStep2">
+                  Nastavi
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="step" id="step2" aria-label="Odaberite uslugu">
+        <div class="container">
+          <div class="card">
+            <h2 class="step-title">2. Odaberite program / uslugu</h2>
+            <p class="step-desc">Izaberite jednu opciju da nastavimo dalje.</p>
+
+            <div class="pick-grid" id="serviceGrid" role="list">
+              <button
+                class="pick-card"
+                type="button"
+                data-service="Članarina (slobodno vežbanje)"
+              >
+                <span class="pick-title">Članarina</span>
+                <span class="pick-desc">Slobodno vežbanje + pristup sali.</span>
+                <span class="pick-meta">Najčešći izbor</span>
+              </button>
+
+              <button
+                class="pick-card"
+                type="button"
+                data-service="Personalni trening"
+              >
+                <span class="pick-title">Personalni trening</span>
+                <span class="pick-desc">Rad 1 na 1 uz plan i praćenje.</span>
+                <span class="pick-meta">Najbrže do cilja</span>
+              </button>
+
+              <button
+                class="pick-card"
+                type="button"
+                data-service="Vođeni trening"
+              >
+                <span class="pick-title">Vođeni trening</span>
+                <span class="pick-desc"
+                  >Trening u vođenoj grupi / terminu.</span
+                >
+                <span class="pick-meta">Motivacija + ritam</span>
+              </button>
+
+              <button class="pick-card" type="button" data-service="Masaža">
+                <span class="pick-title">Masaža</span>
+                <span class="pick-desc">Relax / sportska / terapeutska.</span>
+                <span class="pick-meta">Oporavak</span>
+              </button>
+
+              <button
+                class="pick-card"
+                type="button"
+                data-service="Nutrition (plan ishrane)"
+              >
+                <span class="pick-title">Nutrition</span>
+                <span class="pick-desc">Plan ishrane + konsultacije.</span>
+                <span class="pick-meta">Navike + rezultat</span>
+              </button>
+
+              <button
+                class="pick-card pick-card--featured"
+                type="button"
+                data-service="InBody 770 analiza"
+              >
+                <span class="pick-title">InBody 770</span>
+                <span class="pick-desc">Analiza telesnog sastava.</span>
+                <span class="pick-meta">Precizan uvid</span>
+              </button>
+            </div>
+
+            <p class="error" id="step2Error" aria-live="polite"></p>
+
+            <div class="actions actions-split">
+              <button class="btn btn-gray" type="button" id="backTo1">
+                Nazad
+              </button>
+              <button
+                class="btn btn-blue"
+                type="button"
+                id="toNextAfterService"
+                disabled
+              >
+                Nastavi
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 3 (conditional) -->
+      <section class="step" id="step3" aria-label="Odaberite svog trenera">
+        <div class="container">
+          <div class="card">
+            <h2 class="step-title">3. Odaberite svog trenera</h2>
+            <p class="step-desc">
+              Ovaj korak je potreban za personalni i vođeni trening.
+            </p>
+
+            <div class="trainer-grid" id="trainerGrid" role="list">
+              <button
+                class="trainer-card"
+                type="button"
+                data-trainer="Bojan Magazin"
+              >
+                <span class="trainer-img">
+                  <img
+                    src="/img/trainers/bojan.jpg"
+                    alt="Trener Bojan Magazin"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="trainer-info">
+                  <span class="trainer-name">Bojan Magazin</span>
+                  <span class="trainer-role">Personalni trener</span>
+                </span>
+              </button>
+
+              <button
+                class="trainer-card"
+                type="button"
+                data-trainer="Jovana Nikolovski"
+              >
+                <span class="trainer-img">
+                  <img
+                    src="/img/trainers/jovana.jpg"
+                    alt="Trener Jovana Nikolovski"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="trainer-info">
+                  <span class="trainer-name">Jovana Nikolovski</span>
+                  <span class="trainer-role">Kondicioni trener</span>
+                </span>
+              </button>
+
+              <button
+                class="trainer-card"
+                type="button"
+                data-trainer="Nenad Stanisavljević"
+              >
+                <span class="trainer-img">
+                  <img
+                    src="/img/trainers/nenad.jpg"
+                    alt="Trener Nenad Stanisavljević"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="trainer-info">
+                  <span class="trainer-name">Nenad Stanisavljević</span>
+                  <span class="trainer-role">Funkcionalni trening</span>
+                </span>
+              </button>
+
+              <button
+                class="trainer-card"
+                type="button"
+                data-trainer="Nemanja Tunguz"
+              >
+                <span class="trainer-img">
+                  <img
+                    src="/img/trainers/nemanja.jpg"
+                    alt="Trener Nemanja Tunguz"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="trainer-info">
+                  <span class="trainer-name">Nemanja Tunguz</span>
+                  <span class="trainer-role"
+                    >Mršavljenje &amp; oblikovanje</span
+                  >
+                </span>
+              </button>
+            </div>
+
+            <p class="error" id="step3Error" aria-live="polite"></p>
+
+            <div class="actions actions-split">
+              <button class="btn btn-gray" type="button" id="backTo2">
+                Nazad
+              </button>
+              <button
+                class="btn btn-blue"
+                type="button"
+                id="toSummary"
+                disabled
+              >
+                Nastavi
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 4 (summary) -->
+      <section class="step" id="step4" aria-label="Potvrda rezervacije">
+        <div class="container">
+          <div class="card">
+            <h2 class="step-title">4. Provera podataka</h2>
+            <p class="step-desc">
+              Proverite informacije i potvrdite rezervaciju.
+            </p>
+
+            <dl class="summary">
+              <div class="summary-row">
+                <dt>Ime i prezime</dt>
+                <dd id="sumName">—</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Telefon</dt>
+                <dd id="sumPhone">—</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Email</dt>
+                <dd id="sumEmail">—</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Odabrano</dt>
+                <dd id="sumService">—</dd>
+              </div>
+              <div class="summary-row" id="sumTrainerRow">
+                <dt>Trener</dt>
+                <dd id="sumTrainer">—</dd>
+              </div>
+            </dl>
+
+            <div class="actions actions-split">
+              <button class="btn btn-gray" type="button" id="backFromSummary">
+                Nazad
+              </button>
+              <button
+                class="btn btn-blue btn-big"
+                type="button"
+                id="confirmBtn"
+              >
+                POTVRDI REZERVACIJU
+              </button>
+            </div>
+
+            <p class="hint" id="confirmHint">
+              Klikom na potvrdu šaljemo prijavu (za sada simulacija, kasnije
+              povezujemo na formu).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 5 (success) -->
+      <section class="step" id="step5" aria-label="Uspešna prijava">
+        <div class="container">
+          <div class="success">
+            <h2 class="success-title">
+              Uspešno ste postali član teretane Fit House Kosa
+            </h2>
+            <p class="success-text">
+              Informacije o slobodnim terminima ćete dobiti kroz par minuta.
+            </p>
+
+            <div class="actions">
+              <a class="btn btn-blue" href="/index.html">Nazad na početnu</a>
+              <a class="btn btn-gray" href="/kontakt/kontakt.html">Kontakt</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="clan.js"></script>
+  </body>
+</html>

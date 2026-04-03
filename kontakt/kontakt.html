@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt | Fit Kosa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="kontakt.css" />
+  </head>
+
+  <body class="page-fade">
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="Fit Kosa - početna">
+          <span class="brand-logo-wrap" aria-hidden="true">
+            <img class="brand-logo" src="/img/logo.png" alt="Fit Kosa logo" />
+          </span>
+        </a>
+
+        <div class="header-right">
+          <div class="menu header-nav" data-dropdown="nav">
+            <button
+              class="menu-btn"
+              type="button"
+              data-dropdown-trigger="nav"
+              aria-label="Otvori navigaciju"
+              aria-expanded="false"
+            >
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+              <span class="menu-btn-line"></span>
+            </button>
+
+            <nav
+              class="dropdown"
+              data-dropdown-panel="nav"
+              aria-label="Sekcije sajta"
+            >
+              <a class="dropdown-link" href="/index.html">Početna</a>
+              <a class="dropdown-link" href="/treneri/treneri.html">Treneri</a>
+              <a class="dropdown-link" href="/onama/onama.html">O&nbsp;nama</a>
+              <a class="dropdown-link" href="/cenovnik/cenovnik.html"
+                >Cenovnik</a
+              >
+              <a
+                class="dropdown-link is-active"
+                href="/kontakt/kontakt.html"
+                aria-current="page"
+              >
+                Kontakt
+              </a>
+              <a class="dropdown-cta" href="/clan/clan.html">Postani član</a>
+            </nav>
+          </div>
+
+          <!-- ✅ uklonjeno: promena jezika -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="page-hero reveal" aria-label="Kontakt - naslov">
+        <div class="container">
+          <h1 class="page-title">KONTAKT</h1>
+          <p class="page-subtitle">Piši nam ili nas pozovi — odgovaramo brzo</p>
+        </div>
+      </section>
+
+      <!-- CONTACT GRID -->
+      <section class="contact-page reveal" aria-label="Kontakt sadržaj">
+        <div class="container contact-shell">
+          <div class="contact-card">
+            <h2 class="contact-title">Kontakt informacije</h2>
+
+            <p class="contact-text">Adresa: Ulica i broj, Novi Beograd</p>
+            <p class="contact-text">Telefon: +381 60 000 000</p>
+            <p class="contact-text">Email: info@fitkosa.rs</p>
+
+            <div class="quick-actions" aria-label="Brze akcije">
+              <a class="quick-btn quick-btn--blue" href="tel:+38160000000"
+                >POZOVI</a
+              >
+              <a class="quick-btn quick-btn--gray" href="mailto:info@fitkosa.rs"
+                >EMAIL</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h2 class="contact-title">Pošalji poruku</h2>
+            <form
+              class="contact-form"
+              action="#"
+              method="post"
+              aria-label="Kontakt forma"
+            >
+              <input
+                class="contact-input"
+                type="text"
+                name="ime"
+                placeholder="Ime"
+                autocomplete="name"
+              />
+              <input
+                class="contact-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                autocomplete="email"
+              />
+              <textarea
+                class="contact-textarea"
+                name="poruka"
+                placeholder="Poruka"
+                rows="5"
+              ></textarea>
+              <button class="contact-submit" type="submit">POŠALJI</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAP -->
+      <section class="map-section reveal" aria-label="Lokacija na mapi">
+        <div class="container">
+          <div class="map-card">
+            <header class="map-header">
+              <h2 class="map-title">LOKACIJA</h2>
+              <p class="map-subtitle">
+                Pronađi nas na mapi — uputstva i navigacija
+              </p>
+            </header>
+
+            <div class="map-shell" aria-label="Google mapa">
+              <iframe
+                class="map-iframe"
+                title="Fit Kosa lokacija"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+                src="https://www.google.com/maps?q=Be%C5%BEanijska%20kosa%20Novi%20Beograd&output=embed"
+              ></iframe>
+            </div>
+
+            <div class="map-actions">
+              <a
+                class="map-btn map-btn--blue"
+                target="_blank"
+                rel="noopener"
+                href="https://www.google.com/maps?q=Be%C5%BEanijska%20kosa%20Novi%20Beograd"
+              >
+                OTVORI U GOOGLE MAPS
+              </a>
+
+              <a
+                class="map-btn map-btn--gray"
+                target="_blank"
+                rel="noopener"
+                href="https://www.google.com/maps/dir/?api=1&destination=Be%C5%BEanijska%20kosa%20Novi%20Beograd"
+              >
+                NAVIGACIJA
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="kontakt.js"></script>
+  </body>
+</html>
